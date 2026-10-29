@@ -172,7 +172,7 @@ var Store = (function () {
 
 var S = Object.assign({
   engine: 'google', deeplKey: '', claudeKey: '', claudeModel: 'claude-sonnet-5-5', arStyle: 'msa',
-  mwKey: '', mwType: 'collegiate', thesKey: '', defsAr: true, fallbackDict: true, autoSpeak: true, rate: 1,
+  mwKey: '', mwType: 'collegiate', thesKey: '', defsAr: true, mwInline: true, fallbackDict: true, autoSpeak: true, rate: 1,
   showPron: true, pronAr: true, enVoice: '', enVoiceName: '',
   pairA: 'en', pairB: 'ar', voices: {}, voiceNames: {}, clipWatch: true
 }, Store.get('settings', {}));
@@ -1082,7 +1082,7 @@ async function runTranslate(engine, preview) {
 }
 
 function autoLookupWord() {
-  var r = T.result; if (!r || r.preview) return null;
+  var r = T.result; if (!r || r.preview || S.mwInline === false) return null;
   function clean(s) { return s.trim().replace(/^[\s"'“”‘’(\[]+|[\s"'“”‘’)\].,!?;:،؛؟]+$/g, ''); }
   if (r.sl !== 'en' && r.tl !== 'en') return null;
   var w = r.sl === 'en' ? clean(r.source) : clean(r.text.split(/[,،;\n]/)[0]);
@@ -1394,6 +1394,14 @@ function engineRow(e) {
     '<span class="radio"></span><div class="r-main"><div class="r-title">' + ENG[e].label + '</div><div class="r-sub">' + ENG[e].desc + '</div></div>' +
     (!engineReady(e) ? '<span class="badge">يحتاج مفتاح</span>' : '') + '</div>';
 }
+function mwPanel() {
+  var on = !!(S.mwKey || '').trim();
+  return '<div class="panel"><div class="row choice' + (S.mwInline !== false ? ' is-on' : '') + '" data-act="mw-toggle" role="switch" aria-checked="' + (S.mwInline !== false) + '">' +
+    '<span class="radio"></span><div class="r-main"><div class="r-title">قاموس Merriam‑Webster</div><div class="r-sub">' +
+    (on ? 'مفعّل: يطلع تعريف الكلمة تحت الترجمة، وزر «تعريف MW» في أدوات كل ترجمة.' : 'يحتاج مفتاح مجاني. بدونه يشتغل قاموس بديل.') + '</div></div>' +
+    (on ? '' : '<span class="badge">يحتاج مفتاح</span>') + '</div>' +
+    '<div class="row"><button type="button" class="link-btn" data-act="goto-mw">' + (on ? 'فحص مفتاح القاموس' : 'إضافة مفتاح القاموس') + '</button></div></div>';
+}
 function keyField(k, label, ph) {
   return '<div class="field" id="f-' + k + '"><div class="f-label"><span>' + label + '</span></div>' +
     '<div class="f-wrap"><input type="password" data-key="' + k + '" value="' + esc(S[k]) + '" placeholder="' + esc(ph || '') + '" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">' +
@@ -1411,6 +1419,7 @@ function seg(k, v, label) {
 function renderSettings() {
   $('#settings').innerHTML =
     '<div class="group"><h2>محرك الترجمة</h2><div class="panel">' + ['google', 'deepl', 'claude'].map(engineRow).join('') + '</div>' +
+    '<h2 style="margin-top:14px">القاموس</h2>' + mwPanel() +
     '<p class="hint">أثناء الكتابة أو الكلام تظهر معاينة فورية من Google، ثم تحل محلها ترجمة المحرك الذي اخترته.</p></div>' +
 
     '<div class="group"><h2>لوحة المفاتيح</h2><div class="panel">' +
@@ -1634,7 +1643,7 @@ $('#outText').addEventListener('click', function (e) {
 });
 $$('.mic[data-side]').forEach(function (b) { b.addEventListener('click', function () { toggleMic(b.getAttribute('data-lang')); }); });
 $('#enginePill').addEventListener('click', function () {
-  openModal('<h3>محرك الترجمة</h3><div class="panel">' + ['google', 'deepl', 'claude'].map(engineRow).join('') + '</div>');
+  openModal('<h3>محرك الترجمة</h3><div class="panel">' + ['google', 'deepl', 'claude'].map(engineRow).join('') + '</div><h3 style="margin-top:16px">القاموس</h3>' + mwPanel());
 });
 $('#tabs').addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) showView(b.getAttribute('data-view')); });
 $('#histSeg').addEventListener('click', function (e) {
@@ -1693,7 +1702,9 @@ document.addEventListener('click', function (e) {
     case 'open-dict': showView('dict'); dictSearch(b.getAttribute('data-w')); return;
     case 'retry': T.result = null; scheduleTranslate(true); return;
     case 'goto-settings': showView('settings'); return;
-    case 'goto-mw': gotoKey('mwKey'); return;
+    case 'goto-mw': closeModal(); gotoKey('mwKey'); return;
+    case 'mw-toggle': S.mwInline = S.mwInline === false; saveSettings(); toast(S.mwInline ? 'تعريف ميريم ويبستر شغّال' : 'تعريف ميريم ويبستر موقّف');
+      var pn = b.closest('.panel'); if (pn) pn.outerHTML = mwPanel(); if (!S.mwInline) hideInline(); return;
     case 'use-engine': {
       var en = b.getAttribute('data-e'), text = cur();
       var r = tCache.get(en + '|' + T.src + '|' + T.tgt + '|' + text); if (!r) return;
