@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>ترجمان</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <h1 class="brand">ترجمان</h1>
+    <button class="engine-pill" id="enginePill" type="button" aria-label="اختيار محرك الترجمة">
+      <span class="engine-dot" aria-hidden="true"></span><span id="engineName">Google</span>
+    </button>
+  </header>
+
+  <main id="views">
+    <!-- ترجمة -->
+    <section class="view is-active" id="view-translate" aria-label="ترجمة">
+      <div class="scroll" id="translateScroll">
+        <div class="tools-strip" id="toolsStrip" role="toolbar" aria-label="أدوات"></div>
+        <div class="clip-banner" id="clipBanner" hidden></div>
+        <div class="sheet">
+          <div class="langbar">
+            <button class="lang" id="srcLang" type="button">English</button>
+            <button class="swap" id="swapBtn" type="button" aria-label="تبديل اللغتين" data-icon="swap"></button>
+            <button class="lang" id="tgtLang" type="button">العربية</button>
+          </div>
+
+          <div class="src">
+            <textarea id="srcText" dir="auto" rows="3" autocomplete="off" autocorrect="on" spellcheck="true"
+              placeholder="اكتب هنا أو اضغط على الميكروفون"></textarea>
+            <div class="tools">
+              <button class="ic" id="clearBtn" type="button" aria-label="مسح" data-icon="x" hidden></button>
+              <button class="ic" id="pasteBtn" type="button" aria-label="لصق" data-icon="paste"></button>
+              <button class="ic" id="speakSrcBtn" type="button" aria-label="نطق النص" data-icon="speaker"></button>
+              <span class="grow"></span>
+              <span class="count" id="charCount"></span>
+            </div>
+          </div>
+
+          <div class="out" id="out">
+            <div class="busy" id="busy" aria-hidden="true"></div>
+            <div class="out-text is-empty" id="outText">الترجمة تظهر هنا</div>
+            <div class="out-note" id="outNote" hidden></div>
+            <div class="tools" id="outTools" hidden>
+              <span class="engine-tag" id="engineTag"></span>
+              <span class="grow"></span>
+              <button class="ic" id="moreBtn" type="button" aria-label="أدوات الترجمة" data-icon="more"></button>
+              <button class="ic" id="compareBtn" type="button" aria-label="قارن بين المحركات" data-icon="compare"></button>
+              <button class="ic" id="starBtn" type="button" aria-label="حفظ في المفضلة" data-icon="star"></button>
+              <button class="ic" id="copyBtn" type="button" aria-label="نسخ الترجمة" data-icon="copy"></button>
+              <button class="ic" id="speakOutBtn" type="button" aria-label="نطق الترجمة" data-icon="speaker"></button>
+            </div>
+          </div>
+        </div>
+
+        <div id="hint" class="block"></div>
+        <div id="pron" class="block" hidden></div>
+        <div id="extra" class="block" hidden></div>
+        <div id="compare" class="block" hidden></div>
+        <div id="idioms" class="block" hidden></div>
+        <div id="hints" class="block" hidden></div>
+        <div id="alts" class="block" hidden></div>
+        <div id="words" class="block" hidden></div>
+        <div id="inlineDict" class="block" hidden></div>
+      </div>
+
+      <div class="mic-dock">
+        <button class="mic" type="button" data-side="b" data-lang="ar" aria-label="تحدث بالعربية">
+          <span class="mic-ring" aria-hidden="true"></span>
+          <span class="mic-ic" data-icon="mic"></span>
+          <span class="mic-label">العربية</span>
+        </button>
+        <button class="mic mic-auto" type="button" id="micAuto" aria-label="تحدث بأي لغة، والتطبيق يعرفها">
+          <span class="mic-ring" aria-hidden="true"></span>
+          <span class="mic-ic" data-icon="mic"></span>
+          <span class="mic-label">تلقائي</span>
+        </button>
+        <button class="mic" type="button" data-side="a" data-lang="en" aria-label="Speak English">
+          <span class="mic-ring" aria-hidden="true"></span>
+          <span class="mic-ic" data-icon="mic"></span>
+          <span class="mic-label">English</span>
+        </button>
+        <div class="dock-note" id="dockNote" hidden></div>
+      </div>
+    </section>
+
+    <!-- قاموس -->
+    <section class="view" id="view-dict" aria-label="القاموس">
+      <form class="search" id="dictForm" autocomplete="off">
+        <span class="search-ic" data-icon="search" aria-hidden="true"></span>
+        <input id="dictInput" type="search" dir="auto" enterkeyhint="search" autocapitalize="off" autocorrect="off" spellcheck="false"
+          placeholder="ابحث عن كلمة إنجليزية أو عربية">
+      </form>
+      <div class="scroll" id="dictScroll">
+        <div id="dictBody"></div>
+      </div>
+    </section>
+
+    <!-- تعلّم -->
+    <section class="view" id="view-learn" aria-label="تعلّم">
+      <div class="scroll" id="learnScroll">
+        <div id="learnBody"><div class="empty"><div class="big">قسم التعلّم</div>البطاقات والاختبارات وكلمة اليوم توصل في التحديث الجاي.</div></div>
+      </div>
+    </section>
+
+    <!-- السجل -->
+    <section class="view" id="view-history" aria-label="السجل">
+      <div class="seg seg4" id="histSeg" role="tablist">
+        <button type="button" class="is-on" data-f="all">الكل</button>
+        <button type="button" data-f="fav">المفضلة</button>
+        <button type="button" data-f="convo">المحادثات</button>
+        <button type="button" data-f="coll">المجموعات</button>
+      </div>
+      <div class="scroll" id="histScroll">
+        <ul class="hist" id="histList"></ul>
+      </div>
+    </section>
+
+    <!-- الإعدادات -->
+    <section class="view" id="view-settings" aria-label="الإعدادات">
+      <div class="scroll" id="settingsScroll">
+        <div class="settings" id="settings"></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabs" id="tabs">
+    <button type="button" class="is-on" data-view="translate"><span data-icon="translate"></span><span>ترجمة</span></button>
+    <button type="button" data-view="dict"><span data-icon="book"></span><span>القاموس</span></button>
+    <button type="button" data-view="learn"><span data-icon="cap"></span><span>تعلّم</span></button>
+    <button type="button" data-view="history"><span data-icon="clock"></span><span>السجل</span></button>
+    <button type="button" data-view="settings"><span data-icon="gear"></span><span>الإعدادات</span></button>
+  </nav>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-back" data-close></div>
+  <div class="modal-sheet" id="modalSheet" role="dialog" aria-modal="true"></div>
+</div>
+
+<div id="screens"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="pronounce.js"></script>
+<script src="app.js"></script>
+<script src="data/idioms.js"></script>
+<script src="vendor/fflate.min.js"></script>
+<script src="features.js"></script>
+<script src="voice.js"></script>
+<script src="vision.js"></script>
+<script src="data/cefr.js"></script>
+<script src="data/learn-data.js"></script>
+<script src="learn.js"></script>
+<script src="pronlab.js"></script>
+<script src="launch.js"></script>
+</body>
+</html>

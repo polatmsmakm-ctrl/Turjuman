@@ -1,0 +1,17 @@
+name: Build IPA
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build IPA (app + keyboard + share + widget)
+        run: |
+          SDK=$(xcrun --sdk iphoneos --show-sdk-path) sh build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Turjuman-ipa
+          path: out/Turjuman.ipa

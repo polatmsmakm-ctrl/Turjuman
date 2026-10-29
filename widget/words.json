@@ -1,0 +1,620 @@
+[
+{
+"w": "resilient",
+"ipa": "rɪˈzɪliənt",
+"ar": "مَرِن، قادر على التعافي",
+"ex": "She is resilient and bounces back from setbacks."
+},
+{
+"w": "meticulous",
+"ipa": "məˈtɪkjələs",
+"ar": "دقيق جدًا في التفاصيل",
+"ex": "He is meticulous about his work."
+},
+{
+"w": "ambiguous",
+"ipa": "æmˈbɪɡjuəs",
+"ar": "غامض، يحتمل أكثر من معنى",
+"ex": "The instructions were ambiguous."
+},
+{
+"w": "reluctant",
+"ipa": "rɪˈlʌktənt",
+"ar": "متردد، غير راغب",
+"ex": "He was reluctant to speak."
+},
+{
+"w": "inevitable",
+"ipa": "ɪnˈevɪtəbəl",
+"ar": "حتمي، لا مفر منه",
+"ex": "Change is inevitable."
+},
+{
+"w": "thrive",
+"ipa": "θraɪv",
+"ar": "يزدهر وينجح",
+"ex": "Plants thrive in sunlight."
+},
+{
+"w": "inspire",
+"ipa": "ɪnˈspaɪər",
+"ar": "يُلهم",
+"ex": "Her story inspires me."
+},
+{
+"w": "curious",
+"ipa": "ˈkjʊriəs",
+"ar": "فضولي",
+"ex": "Children are naturally curious."
+},
+{
+"w": "genuine",
+"ipa": "ˈdʒenjuɪn",
+"ar": "حقيقي، صادق",
+"ex": "She showed genuine concern."
+},
+{
+"w": "fluent",
+"ipa": "ˈfluːənt",
+"ar": "طليق في اللغة",
+"ex": "He is fluent in three languages."
+},
+{
+"w": "persuade",
+"ipa": "pərˈsweɪd",
+"ar": "يُقنع",
+"ex": "I tried to persuade him to stay."
+},
+{
+"w": "acquire",
+"ipa": "əˈkwaɪər",
+"ar": "يكتسب، يحصل على",
+"ex": "She acquired new skills."
+},
+{
+"w": "benefit",
+"ipa": "ˈbenɪfɪt",
+"ar": "فائدة، منفعة",
+"ex": "Exercise has many benefits."
+},
+{
+"w": "challenge",
+"ipa": "ˈtʃælɪndʒ",
+"ar": "تحدٍّ",
+"ex": "This is a big challenge."
+},
+{
+"w": "consistent",
+"ipa": "kənˈsɪstənt",
+"ar": "ثابت، متّسق",
+"ex": "Be consistent in your practice."
+},
+{
+"w": "diligent",
+"ipa": "ˈdɪlɪdʒənt",
+"ar": "مجتهد",
+"ex": "A diligent student always succeeds."
+},
+{
+"w": "efficient",
+"ipa": "ɪˈfɪʃənt",
+"ar": "كفء، فعّال",
+"ex": "This is an efficient method."
+},
+{
+"w": "flexible",
+"ipa": "ˈfleksɪbəl",
+"ar": "مرن",
+"ex": "My schedule is flexible."
+},
+{
+"w": "gratitude",
+"ipa": "ˈɡrætɪtuːd",
+"ar": "امتنان",
+"ex": "She expressed her gratitude."
+},
+{
+"w": "humble",
+"ipa": "ˈhʌmbəl",
+"ar": "متواضع",
+"ex": "He stayed humble after winning."
+},
+{
+"w": "imply",
+"ipa": "ɪmˈplaɪ",
+"ar": "يُلمّح، يعني ضمنًا",
+"ex": "What do you mean to imply?"
+},
+{
+"w": "justify",
+"ipa": "ˈdʒʌstɪfaɪ",
+"ar": "يُبرّر",
+"ex": "How can you justify this?"
+},
+{
+"w": "keen",
+"ipa": "kiːn",
+"ar": "متحمس، شغوف",
+"ex": "She is keen to learn."
+},
+{
+"w": "leisure",
+"ipa": "ˈliːʒər",
+"ar": "وقت الفراغ",
+"ex": "What do you do in your leisure time?"
+},
+{
+"w": "maintain",
+"ipa": "meɪnˈteɪn",
+"ar": "يحافظ على، يصون",
+"ex": "Maintain a healthy lifestyle."
+},
+{
+"w": "neglect",
+"ipa": "nɪˈɡlekt",
+"ar": "يُهمل",
+"ex": "Don't neglect your health."
+},
+{
+"w": "obstacle",
+"ipa": "ˈɑːbstəkəl",
+"ar": "عقبة",
+"ex": "Every obstacle is a lesson."
+},
+{
+"w": "perceive",
+"ipa": "pərˈsiːv",
+"ar": "يُدرك، يرى",
+"ex": "How do you perceive this?"
+},
+{
+"w": "quarrel",
+"ipa": "ˈkwɔːrəl",
+"ar": "شجار، يتشاجر",
+"ex": "They had a quarrel yesterday."
+},
+{
+"w": "rare",
+"ipa": "rer",
+"ar": "نادر",
+"ex": "This is a rare opportunity."
+},
+{
+"w": "sincere",
+"ipa": "sɪnˈsɪr",
+"ar": "مخلص، صادق",
+"ex": "Please accept my sincere thanks."
+},
+{
+"w": "tolerate",
+"ipa": "ˈtɑːləreɪt",
+"ar": "يتحمّل، يتسامح مع",
+"ex": "I can't tolerate rudeness."
+},
+{
+"w": "urgent",
+"ipa": "ˈɜːrdʒənt",
+"ar": "عاجل",
+"ex": "It is an urgent matter."
+},
+{
+"w": "vague",
+"ipa": "veɪɡ",
+"ar": "غير واضح، مبهم",
+"ex": "His answer was vague."
+},
+{
+"w": "witness",
+"ipa": "ˈwɪtnəs",
+"ar": "شاهد، يشهد",
+"ex": "She witnessed the accident."
+},
+{
+"w": "yearn",
+"ipa": "jɜːrn",
+"ar": "يتوق إلى",
+"ex": "He yearns for home."
+},
+{
+"w": "zeal",
+"ipa": "ziːl",
+"ar": "حماس، غيرة",
+"ex": "She works with great zeal."
+},
+{
+"w": "abandon",
+"ipa": "əˈbændən",
+"ar": "يتخلّى عن، يهجر",
+"ex": "Never abandon your dreams."
+},
+{
+"w": "accurate",
+"ipa": "ˈækjərət",
+"ar": "دقيق، صحيح",
+"ex": "The report is accurate."
+},
+{
+"w": "adapt",
+"ipa": "əˈdæpt",
+"ar": "يتكيّف",
+"ex": "Animals adapt to their environment."
+},
+{
+"w": "afford",
+"ipa": "əˈfɔːrd",
+"ar": "يستطيع تحمّل تكلفة",
+"ex": "I can't afford a new car."
+},
+{
+"w": "anxious",
+"ipa": "ˈæŋkʃəs",
+"ar": "قلق",
+"ex": "I feel anxious before exams."
+},
+{
+"w": "appreciate",
+"ipa": "əˈpriːʃieɪt",
+"ar": "يُقدّر",
+"ex": "I appreciate your help."
+},
+{
+"w": "approach",
+"ipa": "əˈproʊtʃ",
+"ar": "أسلوب، يقترب من",
+"ex": "We need a new approach."
+},
+{
+"w": "attitude",
+"ipa": "ˈætɪtuːd",
+"ar": "موقف، سلوك",
+"ex": "A positive attitude helps."
+},
+{
+"w": "avoid",
+"ipa": "əˈvɔɪd",
+"ar": "يتجنّب",
+"ex": "Avoid unnecessary risks."
+},
+{
+"w": "aware",
+"ipa": "əˈwer",
+"ar": "مُدرك، واعٍ",
+"ex": "Are you aware of the problem?"
+},
+{
+"w": "boost",
+"ipa": "buːst",
+"ar": "يعزّز، دفعة",
+"ex": "Coffee gives me a boost."
+},
+{
+"w": "bother",
+"ipa": "ˈbɑːðər",
+"ar": "يُزعج",
+"ex": "Sorry to bother you."
+},
+{
+"w": "capable",
+"ipa": "ˈkeɪpəbəl",
+"ar": "قادر، كفء",
+"ex": "She is a capable leader."
+},
+{
+"w": "cautious",
+"ipa": "ˈkɔːʃəs",
+"ar": "حذر",
+"ex": "Be cautious on the road."
+},
+{
+"w": "claim",
+"ipa": "kleɪm",
+"ar": "يدّعي، مطالبة",
+"ex": "He claims to be innocent."
+},
+{
+"w": "commit",
+"ipa": "kəˈmɪt",
+"ar": "يلتزم، يرتكب",
+"ex": "Commit to your goals."
+},
+{
+"w": "compare",
+"ipa": "kəmˈper",
+"ar": "يقارن",
+"ex": "Compare the two options."
+},
+{
+"w": "concern",
+"ipa": "kənˈsɜːrn",
+"ar": "قلق، يخصّ",
+"ex": "That's not your concern."
+},
+{
+"w": "confident",
+"ipa": "ˈkɑːnfɪdənt",
+"ar": "واثق",
+"ex": "I feel confident today."
+},
+{
+"w": "convince",
+"ipa": "kənˈvɪns",
+"ar": "يُقنع",
+"ex": "You can't convince me."
+},
+{
+"w": "crucial",
+"ipa": "ˈkruːʃəl",
+"ar": "حاسم، بالغ الأهمية",
+"ex": "This step is crucial."
+},
+{
+"w": "decline",
+"ipa": "dɪˈklaɪn",
+"ar": "ينخفض، يرفض بأدب",
+"ex": "Sales began to decline."
+},
+{
+"w": "deliberate",
+"ipa": "dɪˈlɪbərət",
+"ar": "متعمّد",
+"ex": "It was a deliberate choice."
+},
+{
+"w": "demand",
+"ipa": "dɪˈmænd",
+"ar": "طلب، يطالب",
+"ex": "There is high demand."
+},
+{
+"w": "depend",
+"ipa": "dɪˈpend",
+"ar": "يعتمد",
+"ex": "It depends on the weather."
+},
+{
+"w": "determine",
+"ipa": "dɪˈtɜːrmɪn",
+"ar": "يحدّد، يعقد العزم",
+"ex": "Determine the cause."
+},
+{
+"w": "distinct",
+"ipa": "dɪˈstɪŋkt",
+"ar": "مميّز، واضح",
+"ex": "There are two distinct groups."
+},
+{
+"w": "dwell",
+"ipa": "dwel",
+"ar": "يسكن، يطيل التفكير",
+"ex": "Don't dwell on the past."
+},
+{
+"w": "eager",
+"ipa": "ˈiːɡər",
+"ar": "متشوق",
+"ex": "He is eager to start."
+},
+{
+"w": "embrace",
+"ipa": "ɪmˈbreɪs",
+"ar": "يحتضن، يتبنّى",
+"ex": "Embrace new ideas."
+},
+{
+"w": "enhance",
+"ipa": "ɪnˈhæns",
+"ar": "يُحسّن، يُعزّز",
+"ex": "This will enhance quality."
+},
+{
+"w": "ensure",
+"ipa": "ɪnˈʃʊr",
+"ar": "يضمن",
+"ex": "Ensure the door is locked."
+},
+{
+"w": "essential",
+"ipa": "ɪˈsenʃəl",
+"ar": "أساسي، ضروري",
+"ex": "Water is essential for life."
+},
+{
+"w": "evident",
+"ipa": "ˈevɪdənt",
+"ar": "واضح، جليّ",
+"ex": "The risk was evident."
+},
+{
+"w": "exceed",
+"ipa": "ɪkˈsiːd",
+"ar": "يتجاوز",
+"ex": "Results exceeded expectations."
+},
+{
+"w": "fair",
+"ipa": "fer",
+"ar": "عادل",
+"ex": "That's not fair."
+},
+{
+"w": "fundamental",
+"ipa": "ˌfʌndəˈmentəl",
+"ar": "جوهري، أساسي",
+"ex": "Reading is a fundamental skill."
+},
+{
+"w": "generous",
+"ipa": "ˈdʒenərəs",
+"ar": "كريم",
+"ex": "He is very generous."
+},
+{
+"w": "glimpse",
+"ipa": "ɡlɪmps",
+"ar": "لمحة",
+"ex": "I caught a glimpse of her."
+},
+{
+"w": "hesitate",
+"ipa": "ˈhezɪteɪt",
+"ar": "يتردّد",
+"ex": "Don't hesitate to ask."
+},
+{
+"w": "hinder",
+"ipa": "ˈhɪndər",
+"ar": "يعوق",
+"ex": "Fear can hinder progress."
+},
+{
+"w": "humorous",
+"ipa": "ˈhjuːmərəs",
+"ar": "مضحك، فكاهي",
+"ex": "It was a humorous story."
+},
+{
+"w": "immediate",
+"ipa": "ɪˈmiːdiət",
+"ar": "فوري",
+"ex": "We need an immediate answer."
+},
+{
+"w": "indicate",
+"ipa": "ˈɪndɪkeɪt",
+"ar": "يُشير إلى",
+"ex": "Signs indicate a change."
+},
+{
+"w": "influence",
+"ipa": "ˈɪnfluəns",
+"ar": "تأثير، يؤثّر",
+"ex": "Friends influence us."
+},
+{
+"w": "insight",
+"ipa": "ˈɪnsaɪt",
+"ar": "بصيرة، فهم عميق",
+"ex": "She gave great insight."
+},
+{
+"w": "integrity",
+"ipa": "ɪnˈteɡrəti",
+"ar": "نزاهة",
+"ex": "He is a man of integrity."
+},
+{
+"w": "likely",
+"ipa": "ˈlaɪkli",
+"ar": "مرجّح",
+"ex": "It is likely to rain."
+},
+{
+"w": "modest",
+"ipa": "ˈmɑːdɪst",
+"ar": "متواضع، بسيط",
+"ex": "He lives a modest life."
+},
+{
+"w": "motivate",
+"ipa": "ˈmoʊtɪveɪt",
+"ar": "يُحفّز",
+"ex": "Goals motivate us."
+},
+{
+"w": "obvious",
+"ipa": "ˈɑːbviəs",
+"ar": "بديهي، واضح",
+"ex": "The answer is obvious."
+},
+{
+"w": "outcome",
+"ipa": "ˈaʊtkʌm",
+"ar": "نتيجة",
+"ex": "We're happy with the outcome."
+},
+{
+"w": "overcome",
+"ipa": "ˌoʊvərˈkʌm",
+"ar": "يتغلّب على",
+"ex": "She overcame her fear."
+},
+{
+"w": "patient",
+"ipa": "ˈpeɪʃənt",
+"ar": "صبور، مريض",
+"ex": "Be patient with yourself."
+},
+{
+"w": "precise",
+"ipa": "prɪˈsaɪs",
+"ar": "دقيق، محدّد",
+"ex": "Give me precise details."
+},
+{
+"w": "priority",
+"ipa": "praɪˈɔːrəti",
+"ar": "أولوية",
+"ex": "Health is my top priority."
+},
+{
+"w": "reliable",
+"ipa": "rɪˈlaɪəbəl",
+"ar": "موثوق",
+"ex": "He is a reliable friend."
+},
+{
+"w": "reputation",
+"ipa": "ˌrepjuˈteɪʃən",
+"ar": "سمعة",
+"ex": "She has a good reputation."
+},
+{
+"w": "significant",
+"ipa": "sɪɡˈnɪfɪkənt",
+"ar": "مهم، ملحوظ",
+"ex": "A significant improvement."
+},
+{
+"w": "sustain",
+"ipa": "səˈsteɪn",
+"ar": "يُديم، يتحمّل",
+"ex": "Sustain your effort."
+},
+{
+"w": "trustworthy",
+"ipa": "ˈtrʌstwɜːrði",
+"ar": "جدير بالثقة",
+"ex": "He is trustworthy."
+},
+{
+"w": "unique",
+"ipa": "juˈniːk",
+"ar": "فريد",
+"ex": "Everyone is unique."
+},
+{
+"w": "valuable",
+"ipa": "ˈvæljuəbəl",
+"ar": "قيّم",
+"ex": "Time is valuable."
+},
+{
+"w": "vivid",
+"ipa": "ˈvɪvɪd",
+"ar": "حيّ، زاهٍ",
+"ex": "A vivid memory."
+},
+{
+"w": "wisdom",
+"ipa": "ˈwɪzdəm",
+"ar": "حكمة",
+"ex": "Wisdom comes with age."
+},
+{
+"w": "worthwhile",
+"ipa": "ˌwɜːrθˈwaɪl",
+"ar": "يستحق العناء",
+"ex": "It was a worthwhile trip."
+}
+]
